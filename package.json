@@ -17,6 +17,7 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-query": "^3.39.3",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
