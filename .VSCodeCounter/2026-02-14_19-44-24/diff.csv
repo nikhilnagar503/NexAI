@@ -1,0 +1,11 @@
+"filename", "language", "JSON", "TypeScript", "TypeScript JSX", "JSON with Comments", "comment", "blank", "total"
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\bun.lock", "JSON with Comments", 0, 0, 0, 121, 0, 112, 233
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\avatar.tsx", "TypeScript JSX", 0, 0, 47, 0, 0, 7, 54
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\skeleton.tsx", "TypeScript JSX", 0, 0, 11, 0, 0, 3, 14
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\sonner.tsx", "TypeScript JSX", 0, 0, 36, 0, 0, 5, 41
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\user-avatar.tsx", "TypeScript JSX", 0, 0, 25, 0, 0, 2, 27
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\index.ts", "TypeScript", 0, 21, 0, 0, 0, 8, 29
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\schema.ts", "TypeScript", 0, 158, 0, 0, 1, 16, 175
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\seed.ts", "TypeScript", 0, 828, 0, 0, 21, 38, 887
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\package.json", "JSON", 9, 0, 0, 0, 0, 0, 9
+"Total", "-", 9, 1007, 119, 121, 22, 191, 1469

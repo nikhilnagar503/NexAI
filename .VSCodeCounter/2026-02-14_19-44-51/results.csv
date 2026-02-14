@@ -1,0 +1,39 @@
+"filename", "language", "JSON with Comments", "JavaScript", "TypeScript", "JSON", "pip requirements", "Markdown", "TypeScript JSX", "PostCSS", "comment", "blank", "total"
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\README.md", "Markdown", 0, 0, 0, 0, 0, 16, 0, 0, 0, 8, 24
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\globals.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 449, 0, 45, 494
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 35, 0, 2, 4, 41
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 46, 0, 0, 18, 64
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\sign-in\[[...sign]]\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 8, 0, 0, 2, 10
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\sign-up\[[...sign-up]]\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 8, 0, 0, 2, 10
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\bun.lock", "JSON with Comments", 638, 0, 0, 0, 0, 0, 0, 0, 0, 591, 1229
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\background-gradient.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 39, 0, 7, 7, 53
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\cta-section.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 20, 0, 0, 2, 22
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\features-section.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 150, 0, 0, 5, 155
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\hero-section.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 71, 0, 0, 17, 88
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\how-it-works-section.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 52, 0, 0, 4, 56
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\pricing-section.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 15, 0, 0, 2, 17
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\section-heading.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 14, 0, 0, 1, 15
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\layout\footer.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 11, 0, 0, 1, 12
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\layout\header-wrapper.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 7, 0, 0, 4, 11
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\layout\header.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 72, 0, 0, 8, 80
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\providers\query-provider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 19, 0, 0, 4, 23
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\avatar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 47, 0, 0, 7, 54
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\badge.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 41, 0, 0, 6, 47
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\button.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 57, 0, 0, 6, 63
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\card.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 83, 0, 0, 12, 95
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\motion-div.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 40, 0, 0, 5, 45
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\skeleton.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 11, 0, 0, 3, 14
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\sonner.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 36, 0, 0, 5, 41
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\user-avatar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 25, 0, 0, 2, 27
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\index.ts", "TypeScript", 0, 0, 21, 0, 0, 0, 0, 0, 0, 8, 29
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\schema.ts", "TypeScript", 0, 0, 158, 0, 0, 0, 0, 0, 1, 16, 175
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\seed.ts", "TypeScript", 0, 0, 828, 0, 0, 0, 0, 0, 21, 38, 887
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\eslint.config.mjs", "JavaScript", 0, 14, 0, 0, 0, 0, 0, 0, 2, 3, 19
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\lib\utils.ts", "TypeScript", 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\next.config.ts", "TypeScript", 0, 0, 4, 0, 0, 0, 0, 0, 1, 3, 8
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\package.json", "JSON", 0, 0, 0, 51, 0, 0, 0, 0, 0, 1, 52
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\postcss.config.mjs", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 0, 0, 2, 8
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\proxy.ts", "TypeScript", 0, 0, 8, 0, 0, 0, 0, 0, 2, 3, 13
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\requirements.txt", "pip requirements", 0, 0, 0, 0, 18, 0, 0, 0, 3, 3, 24
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\tsconfig.json", "JSON with Comments", 34, 0, 0, 0, 0, 0, 0, 0, 0, 1, 35
+"Total", "-", 672, 20, 1024, 51, 18, 16, 907, 449, 39, 850, 4046
