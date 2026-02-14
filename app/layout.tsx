@@ -13,9 +13,9 @@ const outfitFont = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Meetsy",
+  title: "NexAI",
   description:
-    "Meetsy is a ai learning platform to connect with other learners in the community",
+    "NexAI is a ai learning platform to connect with other learners in the community",
 };
 
 export default function RootLayout({

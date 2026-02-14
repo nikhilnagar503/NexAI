@@ -23,21 +23,25 @@ export default function Header({ isPro }: { isPro: boolean }) {
                   Dashboard
                 </Button>
               </Link>
+
               <Link href="/communities">
                 <Button variant={"ghost"} size={"sm"}>
                   <UsersIcon className="size-4 text-primary" />
                   Communities
                 </Button>
-              </Link>
+                </Link>
+
               <Link href="/chat">
                 <Button variant={"ghost"} size={"sm"}>
                   <MessageCircleIcon className="size-4 text-primary" />
                   Chat
                 </Button>
               </Link>
+
             </nav>
           )}
         </div>
+        
         <div className="flex items-center gap-4">
           {isSignedIn ? (
             <>

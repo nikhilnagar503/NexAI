@@ -57,10 +57,6 @@ export default function Home() {
           <CtaSection />
         </MotionDiv>
 
-
-
-
-
       </div>
 
     </div>
