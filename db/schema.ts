@@ -100,7 +100,7 @@ export const conversationSummaries = pgTable("conversation_summaries", {
 export const usersRelations = relations(users, ({ many }) => ({
   learningGoals: many(learningGoals),
   communityMemberships: many(communityMembers),
-  sentMessages: many(messages),
+  sentMessages: many(messages)
 }));
 
 export const communitiesRelations = relations(communities, ({ one, many }) => ({
