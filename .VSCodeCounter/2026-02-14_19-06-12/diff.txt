@@ -1,0 +1,51 @@
+Date : 2026-02-14 19:06:12
+Directory : c:\Users\nagar\Desktop\meetsy\NexAI\next-ai
+Total : 12 files,  583 codes, 5 comments, 86 blanks, all 674 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| PostCSS            |          1 |        427 |          0 |         40 |        467 |
+| TypeScript JSX     |          8 |        112 |          2 |         21 |        135 |
+| JSON with Comments |          1 |         24 |          0 |         22 |         46 |
+| pip requirements   |          1 |         18 |          3 |          3 |         24 |
+| JSON               |          1 |          2 |          0 |          0 |          2 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                   |         12 |        583 |          5 |         86 |        674 |
+| . (Files)                                                                           |          3 |         44 |          3 |         25 |         72 |
+| app                                                                                 |          5 |        441 |          2 |         40 |        483 |
+| app (Files)                                                                         |          3 |        425 |          2 |         36 |        463 |
+| app\sign-in                                                                         |          1 |          8 |          0 |          2 |         10 |
+| app\sign-in\[[...sign]]                                                             |          1 |          8 |          0 |          2 |         10 |
+| app\sign-up                                                                         |          1 |          8 |          0 |          2 |         10 |
+| app\sign-up\[[...sign-up]]                                                          |          1 |          8 |          0 |          2 |         10 |
+| components                                                                          |          4 |         98 |          0 |         21 |        119 |
+| components\landing                                                                  |          1 |          0 |          0 |          5 |          5 |
+| components\layout                                                                   |          2 |         79 |          0 |         12 |         91 |
+| components\providers                                                                |          1 |         19 |          0 |          4 |         23 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                            | language           | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\globals.css                         | PostCSS            |        427 |          0 |         40 |        467 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\layout.tsx                          | TypeScript JSX     |         -2 |          2 |          0 |          0 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\page.tsx                            | TypeScript JSX     |          0 |          0 |         -4 |         -4 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\sign-in\[[...sign]]\page.tsx        | TypeScript JSX     |          8 |          0 |          2 |         10 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\sign-up\[[...sign-up]]\page.tsx     | TypeScript JSX     |          8 |          0 |          2 |         10 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\bun.lock                                | JSON with Comments |         24 |          0 |         22 |         46 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\hero-section.tsx     | TypeScript JSX     |          0 |          0 |          5 |          5 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\layout\header-wrapper.tsx    | TypeScript JSX     |          7 |          0 |          4 |         11 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\layout\header.tsx            | TypeScript JSX     |         72 |          0 |          8 |         80 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\providers\query-provider.tsx | TypeScript JSX     |         19 |          0 |          4 |         23 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\package.json                            | JSON               |          2 |          0 |          0 |          2 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\requirements.txt                        | pip requirements   |         18 |          3 |          3 |         24 |
+| Total                                                                               |                    |        583 |          5 |         86 |        674 |
++-------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

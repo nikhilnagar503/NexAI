@@ -18,16 +18,19 @@ export default function HeroSection() {
             Powered by AI <SparkleIcon className="size-4 inline-block ml-2" />
           </Badge>
 
+
           <h1>
             Find Your Perfect{" "}
-            <span className="block gradient-text">AI Learning Partner</span>
+            <span className="block gradient-text" >AI Learning Partner</span>
           </h1>
+
 
           <p className="hero-subheading">
             Join communities, set your learning goals, and get matched with
             partners who share your passion. Chat, collaborate, and grow
             together with AI-powered insights.
           </p>
+          
 
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <MotionDiv
@@ -51,6 +54,8 @@ export default function HeroSection() {
                 </Button>
               </Link>
             </MotionDiv>
+
+            
 
 
             <MotionDiv

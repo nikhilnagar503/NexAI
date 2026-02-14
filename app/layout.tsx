@@ -27,11 +27,11 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${outfitFont.className} antialiased`}>
-          {/* <QueryProvider> */}
+          <QueryProvider>
             <HeaderWrapper />
             {children}
             <Footer />
-          {/* </QueryProvider> */}
+          </QueryProvider>
           {/* <Toaster position="top-right" /> */}
         </body>
       </html>
