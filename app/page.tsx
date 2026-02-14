@@ -1,5 +1,5 @@
 import { BackgroundGradient } from "@/components/landing/background-gradient";
-// import CtaSection from "@/components/landing/cta-section";
+import CtaSection from "@/components/landing/cta-section";
 import FeaturesSection from "@/components/landing/features-section";
 import HeroSection from "@/components/landing/hero-section";
 import { MotionDiv } from "@/components/ui/motion-div";
@@ -46,6 +46,15 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <PricingSection />
+        </MotionDiv>
+
+
+
+        <MotionDiv
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <CtaSection />
         </MotionDiv>
 
 

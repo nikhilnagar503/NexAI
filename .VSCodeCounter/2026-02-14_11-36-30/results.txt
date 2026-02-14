@@ -1,0 +1,61 @@
+Date : 2026-02-14 11:36:30
+Directory : c:\Users\nagar\Desktop\meetsy\NexAI\next-ai
+Total : 24 files,  1318 codes, 12 comments, 573 blanks, all 1903 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| TypeScript JSX     |         14 |        676 |          7 |         89 |        772 |
+| JSON with Comments |          2 |        527 |          0 |        458 |        985 |
+| JSON               |          1 |         40 |          0 |          1 |         41 |
+| PostCSS            |          1 |         22 |          0 |          5 |         27 |
+| JavaScript         |          2 |         20 |          2 |          5 |         27 |
+| TypeScript         |          3 |         17 |          3 |          7 |         27 |
+| Markdown           |          1 |         16 |          0 |          8 |         24 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                       |         24 |      1,318 |         12 |        573 |      1,903 |
+| . (Files)                                                                               |          8 |        615 |          5 |        478 |      1,098 |
+| app                                                                                     |          3 |        105 |          0 |         31 |        136 |
+| components                                                                              |         12 |        593 |          7 |         63 |        663 |
+| components\landing                                                                      |          7 |        361 |          7 |         33 |        401 |
+| components\layout                                                                       |          1 |         11 |          0 |          1 |         12 |
+| components\ui                                                                           |          4 |        221 |          0 |         29 |        250 |
+| lib                                                                                     |          1 |          5 |          0 |          1 |          6 |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\README.md                                   | Markdown           |         16 |          0 |          8 |         24 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\globals.css                             | PostCSS            |         22 |          0 |          5 |         27 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\layout.tsx                              | TypeScript JSX     |         37 |          0 |          4 |         41 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\page.tsx                                | TypeScript JSX     |         46 |          0 |         22 |         68 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\bun.lock                                    | JSON with Comments |        493 |          0 |        457 |        950 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\background-gradient.tsx  | TypeScript JSX     |         39 |          7 |          7 |         53 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\cta-section.tsx          | TypeScript JSX     |         20 |          0 |          2 |         22 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\features-section.tsx     | TypeScript JSX     |        150 |          0 |          5 |        155 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\hero-section.tsx         | TypeScript JSX     |         71 |          0 |         12 |         83 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\how-it-works-section.tsx | TypeScript JSX     |         52 |          0 |          4 |         56 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\pricing-section.tsx      | TypeScript JSX     |         15 |          0 |          2 |         17 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\landing\section-heading.tsx      | TypeScript JSX     |         14 |          0 |          1 |         15 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\layout\footer.tsx                | TypeScript JSX     |         11 |          0 |          1 |         12 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\badge.tsx                     | TypeScript JSX     |         41 |          0 |          6 |         47 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\button.tsx                    | TypeScript JSX     |         57 |          0 |          6 |         63 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\card.tsx                      | TypeScript JSX     |         83 |          0 |         12 |         95 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\ui\motion-div.tsx                | TypeScript JSX     |         40 |          0 |          5 |         45 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\eslint.config.mjs                           | JavaScript         |         14 |          2 |          3 |         19 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\lib\utils.ts                                | TypeScript         |          5 |          0 |          1 |          6 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\next.config.ts                              | TypeScript         |          4 |          1 |          3 |          8 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\package.json                                | JSON               |         40 |          0 |          1 |         41 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\postcss.config.mjs                          | JavaScript         |          6 |          0 |          2 |          8 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\proxy.ts                                    | TypeScript         |          8 |          2 |          3 |         13 |
+| c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\tsconfig.json                               | JSON with Comments |         34 |          0 |          1 |         35 |
+| Total                                                                                   |                    |      1,318 |         12 |        573 |      1,903 |
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

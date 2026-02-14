@@ -1,21 +1,21 @@
 export function BackgroundGradient() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 z-0 overflow-hidden">
       {/* Base gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10 dark:to-primary/20" />
 
       {/* Radial gradients for depth - multiple layers */}
-      <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
-      <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-secondary/20 blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-primary/30 dark:bg-primary/45 blur-3xl" />
+      <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-secondary/25 dark:bg-secondary/35 blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-primary/15 dark:bg-primary/30 blur-3xl" />
 
       {/* Additional accent gradients with subtle animation */}
       <div
-        className="absolute top-1/4 right-1/4 h-64 w-64 rounded-full bg-primary/15 blur-2xl animate-pulse"
+        className="absolute top-1/4 right-1/4 h-64 w-64 rounded-full bg-primary/20 dark:bg-primary/35 blur-2xl animate-pulse"
         style={{ animationDuration: "4s" }}
       />
       <div
-        className="absolute bottom-1/4 left-1/4 h-64 w-64 rounded-full bg-secondary/15 blur-2xl animate-pulse"
+        className="absolute bottom-1/4 left-1/4 h-64 w-64 rounded-full bg-secondary/20 dark:bg-secondary/30 blur-2xl animate-pulse"
         style={{ animationDuration: "5s" }}
       />
 
