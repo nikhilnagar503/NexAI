@@ -3,8 +3,8 @@ import { BackgroundGradient } from "@/components/landing/background-gradient";
 import FeaturesSection from "@/components/landing/features-section";
 import HeroSection from "@/components/landing/hero-section";
 import { MotionDiv } from "@/components/ui/motion-div";
-// import HowItWorksSection from "@/components/landing/how-it-works-section";
-// import PricingSection from "@/components/landing/pricing-section";
+import HowItWorksSection from "@/components/landing/how-it-works-section";
+import PricingSection from "@/components/landing/pricing-section";
 
 
 
@@ -32,6 +32,24 @@ export default function Home() {
         </MotionDiv>
 
         
+        <MotionDiv
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <HowItWorksSection />
+        </MotionDiv>
+
+
+
+        <MotionDiv
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <PricingSection />
+        </MotionDiv>
+
+
+
 
 
       </div>
