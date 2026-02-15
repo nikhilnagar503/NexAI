@@ -38,3 +38,6 @@ export default function RootLayout({
     </ClerkProvider>
   );
 }
+
+
+//  we use the queryProvider so that data fetching works everywhere in your app
