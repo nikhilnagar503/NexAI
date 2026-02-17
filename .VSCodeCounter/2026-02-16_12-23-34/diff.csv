@@ -1,0 +1,16 @@
+"filename", "language", "TypeScript", "JSON", "TypeScript JSX", "JSON with Comments", "pip requirements", "comment", "blank", "total"
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\(main)\api\[[...route]]\route.ts", "TypeScript", 50, 0, 0, 0, 0, 3, 19, 72
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\(main)\dashboard\page.tsx", "TypeScript JSX", 0, 0, 140, 0, 0, 4, 23, 167
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\(main)\layout.tsx", "TypeScript JSX", 0, 0, 10, 0, 0, 0, 3, 13
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 1, 1, 2
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\app\server\community-routes.ts", "TypeScript", 47, 0, 0, 0, 0, 0, 14, 61
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\bun.lock", "JSON with Comments", 0, 0, 0, 4, 0, 0, 2, 6
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\components\dashboard.tsx\stats-card.tsx", "TypeScript JSX", 0, 0, 17, 0, 0, 0, 2, 19
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\add-conversations.ts", "TypeScript", 127, 0, 0, 0, 0, 8, 27, 162
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\db\query-user.ts", "TypeScript", 23, 0, 0, 0, 0, 0, 7, 30
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\drizzle.config.ts", "TypeScript", 11, 0, 0, 0, 0, 0, 3, 14
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\lib\api-client.ts", "TypeScript", 3, 0, 0, 0, 0, 0, 2, 5
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\lib\user-utils.ts", "TypeScript", 50, 0, 0, 0, 0, 1, 9, 60
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\package.json", "JSON", 0, 6, 0, 0, 0, 0, 0, 6
+"c:\Users\nagar\Desktop\meetsy\NexAI\next-ai\requirements.txt", "pip requirements", 0, 0, 0, 0, -18, -3, -3, -24
+"Total", "-", 311, 6, 167, 4, -18, 14, 109, 593

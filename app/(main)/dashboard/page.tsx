@@ -12,34 +12,34 @@ import {
 import { client } from "@/lib/api-client";
 import { MessageCircleIcon, UsersIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import StatsCard from "@/components/dashboard.tsx/stats-card";
+import StatsCard from "@/components/dashboard/stats-card";
 
 export default function DashboardPage() {
  const { user, isLoaded, isSignedIn } = useUser();
-//  const {
-//   data: userCommunities,
-//   isLoading,
-//   isError,
-//   error,
-//  } = useQuery({
-//   queryKey: ["communities", user?.id],
-//   // queryFn: async () => {
-//   //     const res = await client.api.communities.$get();
-//   //     if (!res.ok) {
-//   //       const bodyText = await res.text();
-//   //       throw new Error(`Failed to fetch communities (${res.status}): ${bodyText}`);
-//   //     }
-//   //     return res.json();
-//   //   },
-//   enabled: isLoaded && isSignedIn,
+ const {
+  data: userCommunities,
+  isLoading,
+  isError,
+  error,
+ } = useQuery({
+  queryKey: ["communities", user?.id],
+  queryFn: async () => {
+      const res = await client.api.communities.$get();
+      if (!res.ok) {
+        const bodyText = await res.text();
+        throw new Error(`Failed to fetch communities (${res.status}): ${bodyText}`);
+      }
+      return res.json();
+    },
+  enabled: isLoaded && isSignedIn,
 
-//   });
+  });
 
 
-// if (!isLoaded) return <div>Loading...</div>;
-// if (!isSignedIn) return <div>Please sign in to view your dashboard.</div>;
-// if (isLoading) return <div>Loading...</div>;
-// if (isError) return <div>Error: {error?.message}</div>;   
+if (!isLoaded) return <div>Loading...</div>;
+if (!isSignedIn) return <div>Please sign in to view your dashboard.</div>;
+if (isLoading) return <div>Loading...</div>;
+if (isError) return <div>Error: {error?.message}</div>;   
 
 return (
   <div className="page-wrapper">
