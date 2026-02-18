@@ -13,7 +13,7 @@ export default function Header({ isPro }: { isPro: boolean }) {
       <div className="layout-container">
         <div className="flex items-center gap-6">
           <Link href="/" className="font-bold text-xl space-x-2">
-            NexAI
+            Meetsy
           </Link>
 
           {isSignedIn && (
@@ -23,25 +23,21 @@ export default function Header({ isPro }: { isPro: boolean }) {
                   Dashboard
                 </Button>
               </Link>
-
               <Link href="/communities">
                 <Button variant={"ghost"} size={"sm"}>
                   <UsersIcon className="size-4 text-primary" />
                   Communities
                 </Button>
-                </Link>
-
+              </Link>
               <Link href="/chat">
                 <Button variant={"ghost"} size={"sm"}>
                   <MessageCircleIcon className="size-4 text-primary" />
                   Chat
                 </Button>
               </Link>
-
             </nav>
           )}
         </div>
-        
         <div className="flex items-center gap-4">
           {isSignedIn ? (
             <>

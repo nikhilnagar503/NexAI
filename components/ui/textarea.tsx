@@ -16,6 +16,3 @@ function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
 }
 
 export { Textarea }
-
-
-// Understand this code later

@@ -3,31 +3,20 @@ import { communities, communityMembers, learningGoals } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
-import { get } from "http";
-// import { getUserIdFromClerkId } from "./user-routes";
-import { client } from "@/lib/api-client";
-import { getOrCreateUserByClerkId } from "@/lib/user-utils";
+import { authMiddleware } from "./middleware/auth-middleware";
 
 type Variables = {
   userId: string;
 };
 
 const communitiesApp = new Hono<{ Variables: Variables }>()
- 
+  .use("/*", authMiddleware)
   .get("/all", async (c) => {
     const allCommunities = await db.select().from(communities);
     return c.json(allCommunities);
   })
-  
   .get("/", async (c) => {
-    const clirkid = c.get("userId");
-    console.log("clerkid", clirkid);
-    const  user = await getOrCreateUserByClerkId(clirkid);
-
-    if(!user){
-      return c.json({error: "User not found"}, 404);
-    }
-    
+    const user = c.get("user");
 
     const userCommunities = await db
       .select({
@@ -43,7 +32,50 @@ const communitiesApp = new Hono<{ Variables: Variables }>()
 
     return c.json(userCommunities);
   })
- 
+  .post("/:communityId/join", async (c) => {
+    const user = c.get("user");
+    const communityId = c.req.param("communityId");
 
+    const [existing] = await db
+      .select()
+      .from(communityMembers)
+      .where(
+        and(
+          eq(communityMembers.userId, user.id),
+          eq(communityMembers.communityId, communityId)
+        )
+      );
+
+    if (existing) {
+      throw new HTTPException(400, {
+        message: "User already joined community",
+      });
+    }
+
+    await db.insert(communityMembers).values({
+      userId: user.id,
+      communityId: communityId,
+    });
+    return c.json({
+      message: "Joined community successfully",
+      communityId: communityId,
+    });
+  })
+  .get("/:communityId/goals", async (c) => {
+    const user = c.get("user");
+    const communityId = c.req.param("communityId");
+
+    const goals = await db
+      .select()
+      .from(learningGoals)
+      .where(
+        and(
+          eq(learningGoals.userId, user.id),
+          eq(learningGoals.communityId, communityId)
+        )
+      );
+
+    return c.json(goals);
+  });
 
 export { communitiesApp };

@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="border-t py-12">
       <div className="text-center">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} NexAI. All rights reserved.
+          &copy; {new Date().getFullYear()} Meetsy. All rights reserved.
         </p>
       </div>
     </footer>

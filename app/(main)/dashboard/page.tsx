@@ -1,7 +1,6 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
-import { useUser } from "@clerk/nextjs";
-import Link from "next/link";
+import StatsCard from "@/components/dashboard/stats-card";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,49 +8,85 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { UserAvatar } from "@/components/ui/user-avatar";
+import { useMatches } from "@/hooks/use-ai-partner";
 import { client } from "@/lib/api-client";
+import { useUser } from "@clerk/nextjs";
+import { useQuery } from "@tanstack/react-query";
 import { MessageCircleIcon, UsersIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import StatsCard from "@/components/dashboard/stats-card";
+import Link from "next/link";
 
 export default function DashboardPage() {
- const { user, isLoaded, isSignedIn } = useUser();
- const {
-  data: userCommunities,
-  isLoading,
-  isError,
-  error,
- } = useQuery({
-  queryKey: ["communities", user?.id],
-  queryFn: async () => {
+  const user = useUser();
+  const {
+    data: userCommunities,
+    isLoading: isLoadingUserCommunities,
+    error: errorUserCommunities,
+  } = useQuery({
+    queryKey: ["communities"],
+    queryFn: async () => {
       const res = await client.api.communities.$get();
       if (!res.ok) {
-        const bodyText = await res.text();
-        throw new Error(`Failed to fetch communities (${res.status}): ${bodyText}`);
+        throw new Error("Failed to fetch communities");
       }
       return res.json();
     },
-  enabled: isLoaded && isSignedIn,
-
   });
 
+  const { data: allMatches } = useQuery({
+    queryKey: ["allMatches"],
+    queryFn: async () => {
+      const res = await client.api.matches["allmatches"].$get();
+      if (!res.ok) {
+        throw new Error("Failed to fetch pending matches");
+      }
+      return res.json();
+    },
+  });
 
-if (!isLoaded) return <div>Loading...</div>;
-if (!isSignedIn) return <div>Please sign in to view your dashboard.</div>;
-if (isLoading) return <div>Loading...</div>;
-if (isError) return <div>Error: {error?.message}</div>;   
+  const pendingMatchesData = allMatches?.filter(
+    (match) => match.status === "pending"
+  );
+  const activeMatchesData = allMatches?.filter(
+    (match) => match.status === "accepted"
+  );
 
-return (
-  <div className="page-wrapper">
-    <div>
-     <h1 className="text-3xl font-bold">Dashboard</h1>
-      <p className="text-muted-foreground">Welcome Back {user?.firstName || "User"}!</p>
-    </div>
-    
-    <Card  className="border-primary">
+  const { data: learningGoals } = useQuery({
+    queryKey: ["communityGoals"],
+    queryFn: async () => {
+      const res = await client.api.communities.goals.$get();
+      if (!res.ok) {
+        throw new Error("Failed to fetch learning goals");
+      }
+      return res.json();
+    },
+    enabled: !!userCommunities?.length,
+  });
+
+  const {
+    data: matches,
+    isLoading: isLoadingMatches,
+    error: errorMatches,
+  } = useMatches();
+
+  if (isLoadingUserCommunities) return <div>Loading...</div>;
+  if (errorUserCommunities)
+    return <div>Error: {errorUserCommunities.message}</div>;
+
+  return (
+    <div className="page-wrapper">
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+        <p className="text-muted-foreground">
+          Welcome back, {user?.user?.firstName || "User"}!
+        </p>
+      </div>
+
+      <Card className="border-primary">
         <CardHeader>
           <CardTitle>
-            🎉 You have  3 matches 
+            🎉 You have {pendingMatchesData?.length} new{" "}
+            {pendingMatchesData?.length === 1 ? "match" : "matches"}!
           </CardTitle>
           <CardDescription>
             Review and accept your matches to start chatting
@@ -63,32 +98,23 @@ return (
             <Button>Review Matches</Button>
           </Link>
         </CardContent>
-        
-    </Card>
+      </Card>
 
-    <div className="grid gap-4 md:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-4">
         <StatsCard
           title="Your Communities"
-          // value={userCommunities?.length || 0}
-          value={0}
+          value={userCommunities?.length || 0}
         />
-        <StatsCard 
-        title="Learning Goals" 
-        // value={learningGoals?.length || 0} 
-        value={0}
-         />
+        <StatsCard title="Learning Goals" value={learningGoals?.length || 0} />
         <StatsCard
           title="Active Matches"
-          // value={activeMatchesData?.length || 0}
-          value={ 0}
+          value={activeMatchesData?.length || 0}
         />
         <StatsCard
           title="Pending Matches"
-          // value={pendingMatchesData?.length || 0}
-          value={0}
+          value={pendingMatchesData?.length || 0}
         />
       </div>
-
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
@@ -101,16 +127,43 @@ return (
               <Link href="/chat">
                 <Button variant="outline" size="sm">
                   <UsersIcon className="size-4 mr-2 text-primary" />
-                   View All
+                  View All
                 </Button>
               </Link>
             </div>
             <CardDescription>Conversations you&apos;re part of</CardDescription>
           </CardHeader>
 
-         
+          <CardContent>
+            <div className="flex flex-col gap-3">
+              {matches?.map((match) => (
+                <Link href={`/chat/${match.id}`} key={match.id}>
+                  <Card className="shadow-none">
+                    <CardHeader>
+                      <div className="flex items-center gap-4">
+                        <UserAvatar
+                          name={match.partner.name}
+                          imageUrl={match.partner.imageUrl ?? undefined}
+                          size="sm"
+                        />
+                        <div className="flex-1 min-w-0">
+                          <CardTitle className="font-medium">
+                            {match.partner.name}
+                          </CardTitle>
+                          <CardDescription className="text-xs text-muted-foreground mt-1">
+                            <span>
+                              {match.userGoals.map((g) => g.title).join(", ")}
+                            </span>
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </CardContent>
         </Card>
-
 
         <Card>
           <CardHeader>
@@ -129,10 +182,9 @@ return (
             <CardDescription>Communities you&apos;re part of</CardDescription>
           </CardHeader>
 
-
-           <CardContent>
+          <CardContent>
             <div className="space-y-3">
-              {/* {userCommunities?.map((community) => (
+              {userCommunities?.map((community) => (
                 <Card className="shadow-none" key={community.id}>
                   <Link href={`/communities/${community.id}`}>
                     <CardHeader>
@@ -145,13 +197,11 @@ return (
                     </CardHeader>
                   </Link>
                 </Card>
-              ))} */}
+              ))}
             </div>
           </CardContent>
-          
         </Card>
       </div>
-  </div>
-);
-
+    </div>
+  );
 }

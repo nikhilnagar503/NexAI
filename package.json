@@ -13,10 +13,12 @@
     "db:seed": "tsx --env-file=.env.local db/seed.ts"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^3.0.29",
     "@clerk/nextjs": "^6.37.3",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-slot": "^1.2.4",
     "@tanstack/react-query": "^5.90.21",
+    "ai": "^6.0.86",
     "class-variance-authority": "^0.7.1",
     "dotenv": "^17.3.1",
     "drizzle-orm": "^0.45.1",
@@ -28,7 +30,6 @@
     "pg": "^8.18.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-query": "^3.39.3",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0"
   },

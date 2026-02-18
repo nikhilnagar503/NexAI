@@ -124,8 +124,6 @@ const features = [
   },
 ];
 
-
-
 export default function FeaturesSection() {
   return (
     <section className="section-container ">

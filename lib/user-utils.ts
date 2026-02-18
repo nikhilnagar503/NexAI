@@ -1,8 +1,7 @@
 import { db } from "@/db";
 import { users } from "@/db/schema";
-import { clerkClient, currentUser, User } from "@clerk/nextjs/server";
+import { currentUser, User } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
-
 
 const createUserFromClerk = async (clerkUser: User) => {
   const [user] = await db
@@ -19,19 +18,11 @@ const createUserFromClerk = async (clerkUser: User) => {
   return user;
 };
 
-
 export const getOrCreateUserByClerkId = async (clerkId: string) => {
   let [user] = await db.select().from(users).where(eq(users.clerkId, clerkId));
 
   if (!user) {
-    let clerkUser = await currentUser();
-    if (!clerkUser) {
-      try {
-        clerkUser = await clerkClient.users.getUser(clerkId);
-      } catch {
-        clerkUser = null;
-      }
-    }
+    const clerkUser = await currentUser();
     if (!clerkUser) {
       return null;
     }

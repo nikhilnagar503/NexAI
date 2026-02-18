@@ -2,7 +2,7 @@ import { LockIcon, PlusIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { Textarea } from "../ui/textarea";
-import { useCreateLearningGoal } from "@/hooks/use-goals";    //  use-goals is hook that contains the logic for creating a learning goal, including the API call and state management for the mutation.
+import { useCreateLearningGoal } from "@/hooks/use-goals";
 
 export default function AddLearningGoal({
   selectedCommunityId,

@@ -1,4 +1,4 @@
-import { useAiPartners } from "@/hooks/use-ai-partner";  //   this use-ai-partner include the 1 . useAiPartners → find AI partner  2 . useMatches → get matches  3. useAcceptMatch → accept match
+import { useAiPartners } from "@/hooks/use-ai-partner";
 import { Button } from "../ui/button";
 import { toast } from "sonner";
 import { LockIcon } from "lucide-react";

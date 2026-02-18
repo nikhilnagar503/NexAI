@@ -1,15 +1,16 @@
-import {db} from "@/db";
-import {Hono} from "hono";
-import { communities as communitiesTable } from "@/db/schema";
-import { HTTPException } from "hono/http-exception";
 import { auth } from "@clerk/nextjs/server";
-import  {handle} from "hono/vercel"
+import { Hono } from "hono";
+import { handle } from "hono/vercel";
+import { HTTPException } from "hono/http-exception";
 import { communitiesApp } from "@/app/server/community-routes";
- 
-type Variables = {
-  userId : string;
-};
+import { learningGoalsApp } from "@/app/server/learning-goals-routes";
+import { matchesApp } from "@/app/server/matches-routes";
+import { conversationsApp } from "@/app/server/conversations-routes";
+import { userApp } from "@/app/server/users-routes";
 
+type Variables = {
+  userId: string;
+};
 
 const app = new Hono<{ Variables: Variables }>().basePath("/api");
 
@@ -41,8 +42,6 @@ app.onError((err, c) => {
   return c.json({ error: "Internal Server Error" }, 500);
 });
 
-// ...existing code...
-
 // middleware
 app.use("/*", async (c, next) => {
   const publicRoutes = ["/api/communities/all"];
@@ -51,17 +50,12 @@ app.use("/*", async (c, next) => {
   }
 
   const session = await auth();
-  console.log("Full session object:", JSON.stringify(session, null, 2));
-  
-  if (!session || !session.userId) {
+  if (!session.userId) {
     throw new HTTPException(401, { message: "Unauthorized" });
   }
   c.set("userId", session.userId);
   return await next();
 });
-
-
-
 
 const routes = app
   .route("/communities", communitiesApp)
@@ -70,11 +64,9 @@ const routes = app
   .route("/conversations", conversationsApp)
   .route("/user", userApp);
 
-
 export type AppType = typeof routes;
 
 export const GET = handle(app);
 export const POST = handle(app);
 export const PUT = handle(app);
 export const DELETE = handle(app);
-

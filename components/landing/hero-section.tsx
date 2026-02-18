@@ -1,11 +1,9 @@
 import { RocketIcon, SparkleIcon, ZapIcon } from "lucide-react";
+import { Badge } from "../ui/badge";
 import { HeroGradient } from "./background-gradient";
 import Link from "next/link";
-import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { MotionDiv } from "../ui/motion-div";
-
-
 
 export default function HeroSection() {
   return (
@@ -13,25 +11,18 @@ export default function HeroSection() {
       <HeroGradient />
       <div className="relative section-container section-padding">
         <div className="text-center">
-
           <Badge className="mb-6 text-sm font-medium" variant="secondary">
             Powered by AI <SparkleIcon className="size-4 inline-block ml-2" />
           </Badge>
-
-
           <h1>
             Find Your Perfect{" "}
-            <span className="block gradient-text" >AI Learning Partner</span>
+            <span className="block gradient-text">AI Learning Partner</span>
           </h1>
-
-
           <p className="hero-subheading">
             Join communities, set your learning goals, and get matched with
             partners who share your passion. Chat, collaborate, and grow
             together with AI-powered insights.
           </p>
-          
-
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <MotionDiv
               initial={{ opacity: 0, y: 20 }}
@@ -54,10 +45,6 @@ export default function HeroSection() {
                 </Button>
               </Link>
             </MotionDiv>
-
-            
-
-
             <MotionDiv
               initial={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -77,8 +64,6 @@ export default function HeroSection() {
                 </Button>
               </Link>
             </MotionDiv>
-
-            
           </div>
         </div>
       </div>

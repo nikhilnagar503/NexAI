@@ -1,8 +1,6 @@
 import { client } from "@/lib/api-client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-
-
 export const useCreateLearningGoal = () => {
   const queryClient = useQueryClient();
   return useMutation({
@@ -24,7 +22,6 @@ export const useCreateLearningGoal = () => {
           description,
           tags,
         },
-        
         param: { communityId },
       });
       if (!res.ok) {
