@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 import { HTTPException } from "hono/http-exception";
-import { communitiesApp } from "@/app/server/community-routes";
+import { communitiesApp, communityMembersApp } from "@/app/server/community-routes";
 import { learningGoalsApp } from "@/app/server/learning-goals-routes";
 import { matchesApp } from "@/app/server/matches-routes";
 import { conversationsApp } from "@/app/server/conversations-routes";
@@ -60,6 +60,7 @@ app.use("/*", async (c, next) => {
 const routes = app
   .route("/communities", communitiesApp)
   .route("/communities", learningGoalsApp)
+  .route("/community-info", communityMembersApp)
   .route("/matches", matchesApp)
   .route("/conversations", conversationsApp)
   .route("/user", userApp);

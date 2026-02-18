@@ -61,30 +61,39 @@ export default function AllCommunitiesPage() {
         <h2 className="text-2xl font-bold"> Browse Communities</h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {allCommunities?.map((community) => (
-            <Card key={community.id}>
-              <CardHeader>
-                <CardTitle>{community.name}</CardTitle>
-                <CardDescription>{community.description}</CardDescription>
-                <CardFooter className="px-0 mt-2">
-                  <Button
-                    className="w-full"
-                    disabled={isJoined(community.id) || showLockIcon}
-                    onClick={() => handleJoinCommunity(community.id)}
-                  >
-                    {showLockIcon && (
-                      <LockIcon className="size-4 text-muted-foreground" />
-                    )}
-                    {isJoined(community.id) ? (
-                      <>
-                        <CheckIcon className="size-4" /> Joined
-                      </>
-                    ) : (
-                      "Join Community"
-                    )}
-                  </Button>
-                </CardFooter>
-              </CardHeader>
-            </Card>
+            <Link
+              key={community.id}
+              href={`/communities/${community.id}`}
+              className="block transition-shadow hover:shadow-md rounded-xl"
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle>{community.name}</CardTitle>
+                  <CardDescription>{community.description}</CardDescription>
+                  <CardFooter className="px-0 mt-2">
+                    <Button
+                      className="w-full"
+                      disabled={isJoined(community.id) || showLockIcon}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleJoinCommunity(community.id);
+                      }}
+                    >
+                      {showLockIcon && (
+                        <LockIcon className="size-4 text-muted-foreground" />
+                      )}
+                      {isJoined(community.id) ? (
+                        <>
+                          <CheckIcon className="size-4" /> Joined
+                        </>
+                      ) : (
+                        "Join Community"
+                      )}
+                    </Button>
+                  </CardFooter>
+                </CardHeader>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

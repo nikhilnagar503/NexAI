@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { communities, communityMembers, learningGoals } from "@/db/schema";
+import { communities, communityMembers, learningGoals, users } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
@@ -78,4 +78,41 @@ const communitiesApp = new Hono<{ Variables: Variables }>()
     return c.json(goals);
   });
 
-export { communitiesApp };
+const communityMembersApp = new Hono<{ Variables: Variables }>()
+  .use("/*", authMiddleware)
+  .get("/:communityId/members", async (c) => {
+    const communityId = c.req.param("communityId");
+
+    const members = await db
+      .select({
+        id: communityMembers.id,
+        joinedAt: communityMembers.joinedAt,
+        user: {
+          id: users.id,
+          name: users.name,
+          email: users.email,
+          imageUrl: users.imageUrl,
+        },
+      })
+      .from(communityMembers)
+      .innerJoin(users, eq(communityMembers.userId, users.id))
+      .where(eq(communityMembers.communityId, communityId));
+
+    return c.json(members);
+  })
+  .get("/:communityId/details", async (c) => {
+    const communityId = c.req.param("communityId");
+
+    const [community] = await db
+      .select()
+      .from(communities)
+      .where(eq(communities.id, communityId));
+
+    if (!community) {
+      throw new HTTPException(404, { message: "Community not found" });
+    }
+
+    return c.json(community);
+  });
+
+export { communitiesApp, communityMembersApp };
